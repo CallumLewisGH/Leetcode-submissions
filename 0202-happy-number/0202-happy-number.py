@@ -1,6 +1,6 @@
 class Solution(object):
     def isHappy(self, n):
-        nibaList = []
+        happyList = []
         while n != 1:
             total = 0
                 
@@ -13,6 +13,6 @@ class Solution(object):
                 return False
 
             else:
-                nibaList.append(n)
+                happyList.append(n)
         
         return True
