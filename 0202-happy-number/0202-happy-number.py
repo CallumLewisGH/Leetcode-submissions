@@ -9,7 +9,7 @@ class Solution(object):
 
             n = total
 
-            if n in nibaList:
+            if n in happyList:
                 return False
 
             else:
