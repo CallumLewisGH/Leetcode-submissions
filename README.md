@@ -1,2 +1,2 @@
 # Leetcode-submissions
-Currently isn't working something to do with new leetcode UI not showing solutions sad :(  - Created using [LeetHub v2](https://github.com/arunbhardwaj/LeetHub-2.0)
+My leetcode submissions. - made by Leethub V3 - link: (https://chromewebstore.google.com/detail/leethub-v3/kdkgpjpenaeoodajljkflmlnkoihkmda?utm_source=ext_app_menu)
