@@ -9,7 +9,7 @@ var twoSum = function(nums, target) {
 
     for (let index=0; index < len; index++){
         var itemIndex = hash_map.get(nums[index]);
-        if (Number.isInteger(itemIndex)){
+        if (itemIndex > -1){
             return [index, itemIndex]
         }
 
