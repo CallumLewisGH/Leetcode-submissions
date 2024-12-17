@@ -3,13 +3,9 @@ public class Solution {
     {
         var magazineChars = new List<char>(magazine);
 
-        foreach (char c in ransomNote)
+        for (int i = 0; i < ransomNote.Length; i++)//Faster than foreach
         {
-            if (magazineChars.Contains(c))
-            {
-                magazineChars.Remove(c);
-            }
-            else
+            if (!magazineChars.Remove(ransomNote[i]))//Faster than .Contains()
             {
                 return false;
             }
