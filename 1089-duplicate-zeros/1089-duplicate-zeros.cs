@@ -10,7 +10,6 @@ public class Solution {
                 queue.Enqueue(0);
             }
             arr[i] = queue.Dequeue();
-            Console.WriteLine(string.Join(", ", arr));
         }
     }
 }
