@@ -7,7 +7,7 @@ public class Solution {
             queue.Enqueue(arr[i]);
             if (arr[i] == 0)
             {
-                queue.Enqueue(0);
+                queue.Enqueue(arr[i]);
             }
             arr[i] = queue.Dequeue();
         }
