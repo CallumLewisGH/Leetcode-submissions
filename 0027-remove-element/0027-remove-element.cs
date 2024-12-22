@@ -6,18 +6,13 @@ public class Solution {
         {
             if (nums[lp] == val)
             {
-                if (nums[rp] == val)
-                {
-                    count += 1;
-                    rp -= 1;
-                }
-                else
+                if (nums[rp] != val)
                 {
                     nums[lp] = nums[rp];
-                    count += 1;
                     lp += 1;
-                    rp -= 1;
                 }
+                count += 1;
+                rp -= 1;
             }
             else
             {
