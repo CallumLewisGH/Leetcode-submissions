@@ -1,8 +1,8 @@
 public class Solution {
     public int RemoveElement(int[] nums, int val) 
     {
-        int lp = 0, rp = nums.Length - 1;
-        for (;lp <= rp;)
+        int count = 0;
+        for (int lp = 0, rp = nums.Length - 1; lp <= rp;)
         {
             if (nums[lp] == val)
             {
@@ -11,6 +11,7 @@ public class Solution {
                     nums[lp] = nums[rp];
                     lp += 1;
                 }
+                count += 1;
                 rp -= 1;
             }
             else
@@ -18,6 +19,6 @@ public class Solution {
                 lp += 1;
             }
         }
-        return rp + 1;
+        return (nums.Length) - count;
     }
 }
