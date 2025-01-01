@@ -10,6 +10,7 @@ public class Solution {
             if (nums[p1] % 2 == 0) 
             {
                 p1++;
+                p2++;
                 continue;
             }
 
