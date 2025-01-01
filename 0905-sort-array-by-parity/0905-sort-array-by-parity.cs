@@ -3,26 +3,17 @@ public class Solution {
     {
         int temp;
 
-        for (int p1 = 0, p2 = 0; p2 < nums.Length && p1 < nums.Length;)
+        for (int p1 = 0, p2 = 0; p2 < nums.Length && p1 < nums.Length; p2++)
         {
             if(nums.Length == 1) return nums;
-
-            if (nums[p1] % 2 == 0) 
-            {
-                p1++;
-                p2++;
-                continue;
-            }
 
             if (nums[p2] % 2 == 0)
             {
                 temp = nums[p1];
                 nums[p1] = nums[p2];
                 nums[p2] = temp;
-                continue;
+                p1++;
             }
-
-            p2++;
         }
         return nums;
         
