@@ -1,17 +1,27 @@
 public class Solution {
     public int MajorityElement(int[] nums) 
     {
-        Dictionary<int, int> numberCount = new Dictionary<int, int>();
-
-        for(int i = 0; i < nums.Length; i++)
+        int num = nums[0];
+        int count = 0;
+        Console.WriteLine(string.Join(", ", nums));
+        for( int i = 0; i < nums.Length; i++)
         {
-            if (numberCount.ContainsKey(nums[i]))
+            if(count == 0)
             {
-                numberCount[nums[i]]++;
-                continue;
+                num = nums[i];
+                count = 1;
             }
-            numberCount.Add(nums[i], 1);
+            else if(num == nums[i])
+            {
+                count += 1;
+            }
+            else
+            {
+                count -= 1;
+            }
+            Console.WriteLine($"Count = {count}|Num = {num}| pointer = {i}");
         }
-        return numberCount.Aggregate((x, y) => x.Value > y.Value ? x : y).Key;
+
+        return num;
     }
 }
