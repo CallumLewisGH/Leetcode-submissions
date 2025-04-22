@@ -19,12 +19,23 @@ func isPalindrome(s string) bool {
 		if str[lp] == str[rp] {
 			rightHalf = append(rightHalf, str[rp])
 			leftHalf = append(leftHalf, str[lp])
-		}else {
-            return false
-        }
+		}
         lp++
         rp--
 	}
+
+	if len(str)%2 != 0 && len(str) != 1 {
+		rightHalf = append(rightHalf, str[(len(str)/2)+1])
+	}else if len(str) == 1 {
+        rightHalf = append(rightHalf, str[(len(str)/2)])
+    }
+
+	var palindrome string = string(rightHalf) + string(leftHalf)
+
+	if len(palindrome) != len(str) {
+		return false
+	}
+
 	return true
     
 }
